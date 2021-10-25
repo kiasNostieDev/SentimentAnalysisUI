@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { w3cwebsocket as W3CWebSocket } from "websocket"
+import { useState } from 'react'
 
+const client = new W3CWebSocket('ws://127.0.0.1:8000')
 function App() {
+  // var msg = ''
+  // const [smsg, setSmsg] = useState('no msg')
+
+  // client.onopen = () => {
+  //   console.log('opened')
+  // }
+  // client.onmessage = (message) => {
+  //   console.log(message)
+  //   setSmsg(message.data)
+  // }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='divider'></div>
+      <div className='whoarewe'>ivies</div>
+      <div className='whatplace'><div className='whatwedo'>hate Classification on Social Media Content</div></div>
+      <div className='elaborate'>We provide this microservice based application to intelligently identify hate content on any deployed media.</div>
+      <div className='instantplace'></div>
     </div>
   );
 }
