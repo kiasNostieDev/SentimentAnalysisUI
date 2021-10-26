@@ -1,16 +1,17 @@
 import './App.css';
-import { w3cwebsocket as W3CWebSocket } from "websocket"
-import { useState } from 'react'
+// import { w3cwebsocket as W3CWebSocket } from "websocket"
+// import { useState } from 'react'
 import Button from '@mui/material/Button'
 import { styled } from '@mui/material/styles'
 import { IconButton } from '@mui/material'
 import BubbleChartIcon from '@mui/icons-material/BubbleChart'
+import { Api } from '@mui/icons-material';
 
 const Input = styled('input')({
   display: 'none',
 });
 
-const client = new W3CWebSocket('ws://127.0.0.1:8000')
+// const client = new W3CWebSocket('ws://127.0.0.1:8000')
 function App() {
   // var msg = ''
   // const [smsg, setSmsg] = useState('no msg')
@@ -44,9 +45,21 @@ function App() {
           </label>
         </div>
         <IconButton aria-label="delete" style={{ display: 'block', margin: 'auto' }}>
-          <BubbleChartIcon sx={{ color: 'red' }} style={{fontSize: '40pt', backgroundColor: 'rgba(131, 64, 148, 0.185)', borderRadius: '25%', marginTop: '30%'}} />
+          <BubbleChartIcon sx={{ color: 'crimson' }} style={{fontSize: '40pt', backgroundColor: 'rgba(131, 64, 148, 0.185)', borderRadius: '25%', marginTop: '30%'}} />
         </IconButton>
       </div>
+      <div className='bottomChecks'>
+        <div className='bottomTitle'>Architecture Check</div>
+        <div className='checkLink'>
+          <Api sx={{color: 'green'}} style={{fontSize: '13pt', float: 'left'}}/>
+          <div className='checkLinkDesc'>Router API check</div>
+        </div>
+        <div className='checkLink'>
+          <Api sx={{color: 'green'}} style={{fontSize: '13pt', float: 'left'}}/>
+          <div className='checkLinkDesc'>Flask API check</div>
+        </div>
+      </div>
+      <div className='go'>Check Request Stream</div>
     </div>
   );
 }
