@@ -21,7 +21,7 @@
 .whoarewe{
     position: absolute;
     font-family: 'Aleo', serif;
-    color: white;
+    color: red;
     font-size: 20pt;
     letter-spacing: 1.5px;
     padding: 15px;
@@ -63,16 +63,46 @@
     margin-top: 6vh;
     z-index: 1;
     overflow: hidden;
-    color: white;
+    /* background-color: white; */
+    background: rgba( 32, 8, 32, 0 );
+    box-shadow: 0 8px 30px 0 rgba(131, 64, 148, 0.185);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 }
 
-.instantplace::before{
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-    filter: blur(10px);
-    /* background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%) */
+.checkTitle{
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 18pt;
+    margin-top: 5%;
+}
+
+.sendPut{
+    width: 80%;
+    margin-left: 9.5%;
+    font-size: 14pt;
+    font-family: 'Aleo', serif;
+    background-color: transparent;
+    color: rgb(160, 133, 255);
+    border: solid;
+    margin-top: 5%;
+    height: 30%;
+    border-radius: 5px;
+    border-width: .5px;
+    border-color: rgba( 255, 255, 255, 0.18 );
+    text-align: start;
+}
+
+.sendIns{
+    color: white;
+    font-size: 10pt;
+    width: 80%;
+    margin-left: 9.5%;
+    margin-top: 5%;
+    text-align: center;
+    font-family: 'Aleo', serif;
 }
